@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html> <html lang=en class=no-js style><!--
  Page saved with SingleFile 
  url: https://accasset.com/form/?fbclid=IwAR2go5OdNJ8GaxmEcyBjD18MKX7alyBwQhdG3eAAkSdIMP1Fu0mrEB7JHGA 
@@ -100,10 +103,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		background: #4D4DCE;
 		color: white;
 	}
+	.hidden{
+		display: none!important;
+	}
 </style>
 
 <!-- <a href="https://api.whatsapp.com/send?phone=+85265278190&text=Hello"  style="background: ;">点我WhatsApp聊天</a> -->
-<a href="whatsapp://send?phone=+85265278190&text=Hello"  class="aaa"> join Us Now</a>
+<!-- <a href="whatsapp://send?phone=+85265278190&text=Hello"  class="aaa"> join Us Now</a> -->
+
+
+<a href="whatsapp://send?phone=+85265278190&text=Hello"  class="aaa single"> join Us Now </a>
+<a href="https://chat.whatsapp.com/LnLM3JaGe3TAz1xGYurCmD"  class="aaa group"> join Us Now !  </a>
 
 
 
@@ -242,7 +252,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  <li>
 <!--  <a data-toggle=modal data-target=#myModal class="sjline button n01">
  <span class=label>join Us Now 1111   </span> -->
-<a href="whatsapp://send?phone=+85265278190&text=Hello"  class="aaa"> join Us Now</a>
+
+
+<a href="whatsapp://send?phone=+85265278190&text=Hello"  class="aaa single"> join Us Now </a>
+<a href="https://chat.whatsapp.com/LnLM3JaGe3TAz1xGYurCmD"  class="aaa group"> join Us Now !  </a>
+
+
 
 
 
@@ -268,7 +283,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  <span class=label>join Us Now</span> -->
 
 
-<a href="whatsapp://send?phone=+85265278190&text=Hello"  class="aaa"> join Us Now</a>
+<a href="whatsapp://send?phone=+85265278190&text=Hello"  class="aaa single"> join Us Now </a>
+<a href="https://chat.whatsapp.com/LnLM3JaGe3TAz1xGYurCmD"  class="aaa group"> join Us Now !  </a>
+
+
 
 
 
@@ -446,7 +464,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  <!-- <a data-toggle=modal data-target=#myModal class=sjline>Join us now</a> -->
 
 
-<a href="whatsapp://send?phone=+85265278190&text=Hello"  class="aaa"> join Us Now  </a>
+
+
+<a href="whatsapp://send?phone=+85265278190&text=Hello"  class="aaa single"> join Us Now </a>
+<a href="https://chat.whatsapp.com/LnLM3JaGe3TAz1xGYurCmD"  class="aaa group"> join Us Now !  </a>
+
+
+
 
 
 
@@ -458,6 +482,39 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  
  </div>
  
+
+
+
+ <script type="text/javascript">
+ 	
+    // 获取当前页面URL
+    var url = window.location.href;
+    // 解析URL以获取查询字符串
+    var queryString = new URL(url).search;
+    // 解析查询字符串为对象
+    var params = new URLSearchParams(queryString);
+    // 获取id参数的值
+    var idValue = params.get('id');
+    console.log(idValue);
+    // alert("asdasdadsada");
+
+    if (idValue == 1) {
+    	// alert("1");
+        // 私聊模式 获取所有class为"item"的a元素
+		var items = document.querySelectorAll('.group');
+		items.forEach(function(item) {
+		    item.classList.add('hidden');
+		});
+    }
+    if (idValue == 100) {
+        // 群聊模式 Group chat  私聊模式 获取所有class为"item"的a元素
+		var items = document.querySelectorAll('.single');
+		items.forEach(function(item) {
+		    item.classList.add('hidden');
+		});
+    }
+
+ </script>
  
  
  
